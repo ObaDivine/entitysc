@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <div th:fragment="headerfiles">
+        <head>
+            <title>Entity Software Company</title>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="description" content="Entity Software COmpany" />
+            <meta name="keywords" content="Entity, Software, Software Company, Web Development, Software Consulting, Software Academy" />
+            <meta name='copyright' content='Entity Software Company' />
+            <link rel="shortcut icon" th:href="@{/images/favicon.ico}" type="image/x-icon" href=""></link>
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet"></link>
+            <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href=""></link>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+            <link rel="stylesheet" th:href="@{/css/slicknav.min.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/cubeportfolio.min.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/magnific-popup.min.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/jquery.fancybox.min.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/niceselect.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/owl.theme.default.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/slickslider.min.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/animate.min.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/reset.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/style.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/responsive.css}" href=""></link>
+            <link rel="stylesheet" th:href="@{/css/color1.css}" href=""></link>
+            <script th:inline="javascript">
+                /*<![CDATA[*/
+
+                var message = [[${alertMessage}]];
+                window.onload = function () {
+                    if (message === "" || message === null || message === "null")
+                        return;
+                    $('.toast').toast('show');
+                };
+                /*]]>*/
+            </script>
+        </head>
+    </div>
+    <body>
+        <div th:fragment="topbar">
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <ul class="contact">
+                                <li><i class="fa fa-headphones"></i> +(234) 803-772-7138</li>
+                                <li><i class="fa fa-envelope"></i> <a href="mailto:info@entitysc.com">info@entitysc.com</a></li>
+                                <li><i class="fa fa-clock-o"></i>Opening: 09am-5pm</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="topbar-right">
+                                <div class="search-form active">
+                                    <a class="icon" href="#"><i class="fa fa-search"></i></a>
+                                    <form class="form" action="#">
+                                        <input placeholder="search.." type="search" />
+                                    </form>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="https://twitter.com/entity_sc"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/entity-software-company"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:fragment="middleBar">
+            <div class="middle-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+                            </div>
+                            <div class="link"><a href="index.html"><span>E</span>ntity</a></div>
+                            <button class="mobile-arrow"><i class="fa fa-bars"></i></button>
+                            <div class="mobile-menu"></div>
+                        </div>
+                        <div class="col-lg-10 col-12">
+                            <div class="mainmenu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li class="active"><a th:href="@{/}">Home<i class="fa fa-caret-down"></i></a></li>
+                                        <li><a href="#">About Us<i class="fa fa-caret-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a th:href="@{/about/company}">Company</a></li>
+                                                <li><a th:href="@{/about/team}">Our Team</a></li>
+                                                <li><a th:href="@{/about/faq}">FAQs</a></li>
+                                                <li><a th:href="@{/about/support}">Support</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Services<i class="fa fa-caret-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a th:href="@{/services/web-app}">Enterprise Application</a></li>
+                                                <li><a th:href="@{/services/automation}">Business Automation</a></li>
+                                                <li><a th:href="@{/services/api}">Web Services</a></li>
+                                                <li><a th:href="@{/services/api}">Microservices</a></li>
+                                                <li><a th:href="@{/services/bootcamp}">Training & Consulting</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Analytic<i class="fa fa-caret-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a th:href="@{/analytics/retail}">Retail Analytic</a></li>
+                                                <li><a th:href="@{/analytics/enterprise}">Decision Management</a></li>
+                                                <li><a th:href="@{/analytics/risk}">Risk Analytic</a></li>
+                                                <li><a th:href="@{/analytics/portfolio}">Portfolio Analysis</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Solution<i class="fa fa-caret-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="blogs.html">Bank Model</a></li>
+                                                <li><a href="blogs-grid-left.html">HR Manager</a></li>
+                                                <li><a href="blogs-grid-right.html">e-Vote</a></li>
+                                                <li><a href="blogs-grid-right.html">Document Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a th:href="@{/contact/}">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="button">
+                                    <a href="contact.html" class="btn">Get a quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:fragment="entitySCMenu">
+            <form id="logoutForm" th:action="@{/admin/logout}" method="POST">
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logout modal" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-primary">Entity SC</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-title">Do you really want to logout?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary btn-sm text-capitalize">Logout</button>
+                                <button type="button" class="btn btn-secondary btn-sm text-capitalize" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block mt-1">
+                        <span class="text-primary">Accion MfB Cooperative</span><span>-- Dashboard</span>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" th:href="@{/admin/password-change}">Change Password
+                            <i class="fas fa-signout"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" data-target="#logoutModal" data-toggle="modal" href="#">Logout
+                            <i class="fas fa-signout"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#" class="brand-link">
+                <img th:src="@{/images/logo.jpg}" alt="Accion MfB Cooperative Logo" class="brand-image img-circle elevation-3" style="opacity: .8" src="" />
+                <p class="brand-text font-weight-light">Cooperative</p>
+            </a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img th:src="@{/images/avatar.png}" class="img-circle elevation-2" alt="User Image" src="" />
+                    </div>
+                    <div class="info">
+                        <span class="text-white">Welcome</span> &nbsp;&nbsp;<span th:text="${#httpServletRequest.remoteUser}" class="text-primary"></span>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-shield"></i>
+                                <p>
+                                    Accion MfB Cooperative
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a th:if="${#request.isUserInRole('UPDATE_ELECTION')}" th:href="@{/admin/election}" class="nav-link text-primary">
+                                        <i class="fas fa-forward nav-icon"></i>
+                                        <p>Setup Election</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:if="${#request.isUserInRole('SETUP_POSITION')}" th:href="@{/admin/position}" class="nav-link text-primary">
+                                        <i class="fas fa-forward nav-icon"></i>
+                                        <p>Create Positions</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:if="${#request.isUserInRole('CREATE_CANDIDATE')}" th:href="@{/admin/candidate}" class="nav-link text-primary">
+                                        <i class="fas fa-forward nav-icon"></i>
+                                        <p>Create Candidate</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:if="${#request.isUserInRole('VIEW_VOTE_CAST')}" th:href="@{/admin/vote}" class="nav-link text-primary">
+                                        <i class="fas fa-forward nav-icon"></i>
+                                        <p>Vote Cast</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:if="${#request.isUserInRole('ELECTION_RESULT')}" th:href="@{/admin/election/result}" class="nav-link">
+                                        <i class="fas fa-forward nav-icon"></i>
+                                        <p>Election Result</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            </aside>
+        </div>
+        <div th:fragment="footer">
+            <footer id="footer" class="footer wow fadeIn">
+                <div class="top-arrow">
+                    <a href="#header" class="btn"><i class="fa fa-angle-up"></i></a>
+                </div>
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-widget about">
+                                    <h2>Office Location</h2>
+                                    <p>Please get in touch and our expert support team will contact you.</p>
+                                    <ul class="list">
+                                        <li><i class="fa fa-map-marker"></i>Address: 1 Ebun Otti Estate, Maryland, Nigeria</li>
+                                        <li><i class="fa fa-headphones"></i>Phone: +(234) 803-772-7138</li>
+                                        <li><i class="fa fa-headphones"></i>Email: <a href="mailto:info@entitysc.com">Info@entitysc.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-widget links">
+                                    <h2>Quick Links</h2>
+                                    <ul class="list">
+                                        <li><a href="about-us.html"><i class="fa fa-caret-right"></i>About Entity Software</a></li>
+                                        <li><a href="services.html"><i class="fa fa-caret-right"></i>Entity Services</a></li>
+                                        <li><a href="projects-masonry.html"><i class="fa fa-caret-right"></i>Entity Project</a></li>
+                                        <li><a href="contact.html"><i class="fa fa-caret-right"></i>Help Desk</a></li>
+                                        <li><a href="contact.html"><i class="fa fa-caret-right"></i>Connect With Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-widget twitter">
+                                    <h2>Recent Tweets</h2>
+                                    <div class="single-tweet">
+                                        <i class="fa fa-twitter"></i>
+                                        <p><a href="#">@Entity</a>Entity Software is indeed flying the logo of microservices from a distant cloud</p>
+                                    </div>
+                                    <div class="single-tweet">
+                                        <i class="fa fa-twitter"></i>
+                                        <p><a href="#">@Entity</a>Microservie is pivotal today and Entity cheers the lead</p>
+                                    </div>
+                                    <div class="single-tweet">
+                                        <i class="fa fa-twitter"></i>
+                                        <p><a href="#">@Entity</a>Entity modular approach to web application development is simply amazing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-widget newsletter">
+                                    <h2>Newsletter</h2>
+                                    <p>Stay up to date with the latest at Entity. Subscribe to our news letter bulletin</p>
+                                    <form th:object="${contactPayload}" th:action="@{/contact/newsletter}" method="POST">
+                                        <input th:field="*{fullname}"  placeholder="Your Name" type="text" required="required"/>
+                                        <input th:field="*{email}" placeholder="your email" type="email" required="required"/>
+                                        <button type="submit" class="button primary">Subscribe Now!</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="bottom-top">
+                                    <ul class="social">
+                                        <li><a href="https://"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://twitter.com/entity_sc"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/entity-software-company"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="https://"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://"><i class="fa fa-youtube"></i></a></li>
+                                    </ul>
+                                    <div class="copyright">
+                                        <p>&copy; <span th:text="${#dates.year(#dates.createNow())}"></span> All Right Reserved. Entity Software Company </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div th:fragment="scriptfiles">
+            <script th:src="@{/js/jquery.min.js}"></script>
+            <script src="js/jquery.min.js"></script>
+            <script th:src="@{/js/jquery-migrate.min.js}"></script>
+            <script th:src="@{/js/popper.min.js}"></script>
+            <script th:src="@{/js/bootstrap.min.js}"></script>
+            <script th:src="@{/js/modernizr.min.js}"></script>
+            <script th:src="@{/js/niceselect.js}"></script>
+            <script th:src="@{/js/tilt.jquery.min.js}"></script>
+            <script th:src="@{/js/jquery.fancybox.min.js}"></script>
+            <script th:src="@{/js/jquery.nav.js}"></script>
+            <script th:src="@{/js/owl.carousel.min.js}"></script>
+            <script th:src="@{/js/slickslider.min.js}"></script>
+            <script th:src="@{/js/cubeportfolio.min.js}"></script>
+            <script th:src="@{/js/jquery.slicknav.min.js}"></script>
+            <script th:src="@{/js/jquery.stellar.min.js}"></script>
+            <script th:src="@{/js/magnific-popup.min.js}"></script>
+            <script th:src="@{/js/wow.min.js}"></script>
+            <script th:src="@{/js/jquery.counterup.min.js}"></script>
+            <script th:src="@{/js/waypoints.min.js}"></script>
+            <script th:src="@{/js/easing.min.js}"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>
+            <script th:src="@{/js/gmap.min.js}"></script>
+            <script th:src="@{/js/main.js}"></script>
+            <div class="toast" style="position: absolute; top: 50px; right: 0; height: auto; width:auto;" data-autohide="false" data-delay="10000">
+                <div class="toast-header">
+                    <strong class="mr-auto text-primary">Entity Software Company</strong>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body bg-white text-primary">
+                    <p th:text="${alertMessage}"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
